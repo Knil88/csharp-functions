@@ -1,6 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
 //void StampaArray(int[] array): che preso un array di numeri interi, stampa a video il contenuto dell’array in questa forma “[elemento 1, elemento 2, elemento 3, ...]“.
 
+using System;
+
 int[] numeri = { 1, 2, 3, 4, 5 };
 StampaArray(numeri);
 
@@ -37,9 +39,11 @@ int[] ElevaArrayAlQuadrato(int[] arr)
     for (int i = 0; i < copiaArray.Length; i++)
     {
         copiaArray[i] = arr[i] * arr[i];
-
-        Console.WriteLine(arr[i]);
-        Console.WriteLine(copiaArray[i]);
+       
+        Console.WriteLine(" ");
+        Console.Write(arr[i]);
+        Console.WriteLine(" ");
+        Console.Write(copiaArray[i]);
       
 
     }
@@ -48,4 +52,20 @@ int[] ElevaArrayAlQuadrato(int[] arr)
     
 }
 
+//int sommaElementiArray(int[] array): che preso un array di numeri interi, restituisca la somma totale di tutti gli elementi dell’array.
 
+int[] interiArray = { 1, 2, 3, 4, 5 };
+int sommaInteri = SommaArray(interiArray);
+Console.WriteLine($"La somma dell'array è : {sommaInteri}");
+StampaArray(ElevaArrayAlQuadrato(interiArray));
+
+
+int SommaArray(int[] array)
+{
+    int somma = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        somma += array[i];
+    }
+    return somma;
+}
