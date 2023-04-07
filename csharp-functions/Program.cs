@@ -57,7 +57,7 @@ int[] ElevaArrayAlQuadrato(int[] arr)
 int[] interiArray = { 1, 2, 3, 4, 5 };
 int sommaInteri = SommaArray(interiArray);
 Console.WriteLine($"La somma dell'array è : {sommaInteri}");
-StampaArray(ElevaArrayAlQuadrato(interiArray));
+
 
 
 int SommaArray(int[] array)
@@ -69,3 +69,5 @@ int SommaArray(int[] array)
     }
     return somma;
 }
+
+StampaArray(ElevaArrayAlQuadrato(interiArray));
